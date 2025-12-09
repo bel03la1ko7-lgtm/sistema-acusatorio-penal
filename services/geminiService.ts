@@ -14,7 +14,7 @@ export const createLegalChat = (): Chat => {
   return ai.chats.create({
     model: MODEL_NAME,
     config: {
-      systemInstruction: `Eres 'JusticiaAI', un asistente experto en el Sistema Penal Acusatorio (SPA) de Latinoamérica (específicamente basado en principios generales aplicables a México, Colombia, Chile, etc.).
+      systemInstruction: `Eres un asistente experto en el Sistema Penal Acusatorio (SPA) de Latinoamérica (específicamente basado en principios generales aplicables a México, Colombia, Chile, etc.).
       
       Tu objetivo es educar y aclarar dudas.
       - Utiliza un lenguaje formal pero accesible.

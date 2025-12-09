@@ -43,7 +43,7 @@ export default function App() {
                 chatInstance={chatInstance} 
                 onReset={resetChat}
                 mode="assistant"
-                initialMessage="¡Hola! Soy JusticiaAI. ¿En qué duda sobre el Sistema Penal Acusatorio te puedo ayudar hoy?"
+                initialMessage="¡Hola! Soy tu asistente legal. ¿En qué duda sobre el Sistema Penal Acusatorio te puedo ayudar hoy?"
               />
             </div>
           )}

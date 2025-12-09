@@ -14,8 +14,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({ setView }) => {
           <Scale className="w-10 h-10 text-legal-700" />
         </div>
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-legal-900 tracking-tight">
-          Maestría en el <br/>
-          <span className="text-legal-600">Sistema Penal Acusatorio</span>
+          Sistema Penal Acusatorio
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
           Una plataforma integral para estudiantes y profesionales del derecho. 

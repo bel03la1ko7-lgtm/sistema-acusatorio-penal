@@ -41,10 +41,6 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
       </div>
       
       <div className="hidden md:block absolute bottom-0 p-4 w-full">
-        <div className="bg-blue-50 p-3 rounded-lg border border-blue-100 mb-3">
-          <p className="text-xs text-blue-800 font-medium mb-1">Potenciado por Gemini</p>
-          <p className="text-[10px] text-blue-600">Modelo: gemini-2.5-flash</p>
-        </div>
         <div className="text-center pt-2 border-t border-gray-100">
              <p className="text-[10px] text-gray-500 font-medium uppercase tracking-wide">Desarrollado por</p>
              <p className="text-[10px] text-legal-600 font-bold mt-0.5 uppercase">Iris L, Evelyn y Alexis</p>
