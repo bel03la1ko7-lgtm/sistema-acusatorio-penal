@@ -58,26 +58,47 @@ export const SimulationSection: React.FC = () => {
 
   if (activeScenario && chatInstance) {
     return (
-      <div className="h-full max-w-5xl mx-auto py-4">
-        <button 
-          onClick={resetSimulation}
-          className="mb-4 text-sm text-gray-500 hover:text-legal-600 flex items-center gap-1"
-        >
-          ← Volver al menú de simulaciones
-        </button>
-        <div className="mb-4 p-4 bg-indigo-50 border border-indigo-100 rounded-xl">
-          <h2 className="font-bold text-indigo-900 text-lg flex items-center gap-2">
-            <Gavel className="w-5 h-5" />
-            {activeScenario.title}
-          </h2>
-          <p className="text-indigo-700 text-sm mt-1">{activeScenario.description}</p>
+      <div className="h-full flex flex-col max-w-5xl mx-auto p-4 md:p-6">
+        {/* Header Section */}
+        <div className="flex-shrink-0 mb-6">
+          <button 
+            onClick={resetSimulation}
+            className="mb-4 text-sm text-gray-500 hover:text-legal-600 flex items-center gap-1 transition-colors font-medium"
+          >
+            ← Volver a escenarios
+          </button>
+          
+          <div className="space-y-3">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <h1 className="text-2xl md:text-3xl font-serif font-bold text-legal-900 flex items-center gap-3">
+                <div className="hidden md:flex p-2 bg-indigo-100 text-indigo-700 rounded-xl">
+                  <Gavel size={24} />
+                </div>
+                {activeScenario.title}
+              </h1>
+              <span className={`self-start md:self-auto px-3 py-1 rounded-full text-xs font-medium border
+                ${activeScenario.difficulty === 'Principiante' ? 'bg-green-50 text-green-700 border-green-200' :
+                  activeScenario.difficulty === 'Intermedio' ? 'bg-yellow-50 text-yellow-700 border-yellow-200' :
+                  'bg-red-50 text-red-700 border-red-200'}`}>
+                {activeScenario.difficulty}
+              </span>
+            </div>
+            
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-4xl border-l-4 border-indigo-100 pl-4">
+              {activeScenario.description}
+            </p>
+          </div>
         </div>
-        <ChatInterface 
-          chatInstance={chatInstance} 
-          mode="simulation"
-          initialMessage="La audiencia está en sesión. Adelante con su intervención."
-          placeholder="Escriba su argumento o pregunta..."
-        />
+
+        {/* Chat Interface Container */}
+        <div className="flex-1 min-h-0 shadow-lg rounded-2xl overflow-hidden border border-gray-200">
+          <ChatInterface 
+            chatInstance={chatInstance} 
+            mode="simulation"
+            initialMessage="La audiencia está en sesión. Adelante con su intervención."
+            placeholder="Escriba su argumento o pregunta..."
+          />
+        </div>
       </div>
     );
   }

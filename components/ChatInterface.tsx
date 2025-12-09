@@ -105,7 +105,7 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
   };
 
   return (
-    <div className="flex flex-col h-[calc(100vh-140px)] md:h-[calc(100vh-40px)] bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+    <div className="flex flex-col h-full bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
       {/* Chat Header */}
       <div className={`p-4 border-b border-gray-100 flex justify-between items-center ${mode === 'simulation' ? 'bg-indigo-50' : 'bg-gray-50'}`}>
         <div className="flex items-center gap-3">

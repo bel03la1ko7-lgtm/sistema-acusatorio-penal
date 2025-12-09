@@ -20,9 +20,8 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
       <div className="p-4 hidden md:block border-b border-gray-200">
         <h1 className="text-xl font-serif font-bold text-legal-900 flex items-center gap-2">
           <Shield className="w-6 h-6 text-legal-600" />
-          JusticiaAI
+          Sistema Penal Acusatorio
         </h1>
-        <p className="text-xs text-gray-500 mt-1">Sistema Penal Acusatorio</p>
       </div>
       
       <div className="flex md:flex-col justify-around md:justify-start p-2 md:p-4 gap-2">
